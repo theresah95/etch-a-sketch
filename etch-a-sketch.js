@@ -10,8 +10,17 @@ function createRow() {
         const box = document.createElement('div');
         box.style.border = "1px black solid";
         box.style.backgroundColor = "white";
-        box.style.height = "50px";
-        box.style.width = "50px";
+        box.style.height = "30px";
+        box.style.width = "30px";
+        
+        //Change Color of Box
+        box.addEventListener(
+            "mouseenter",
+            (event) => {
+              // highlight the mouseenter target
+              event.target.style.backgroundColor = "black";
+            }
+          );
 
         //Append Boxes to Row
         row.appendChild(box);
@@ -21,6 +30,7 @@ function createRow() {
     const container = document.getElementById('container');
     container.appendChild(row);
 }
+
 
 function createGrid (){
 
