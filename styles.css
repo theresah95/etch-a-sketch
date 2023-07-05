@@ -1,5 +1,8 @@
+#title_section {
+    display: flex;
+    justify-content: center;
+}
 container {
     display: flex;
-    height: 960px;
-    width: 960px;
 }
+
