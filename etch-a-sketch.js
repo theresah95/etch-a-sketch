@@ -1,11 +1,11 @@
-function createRow() {
+function createRow(num) {
 
     //Create Row Container
     const row = document.createElement('div');
     row.style.display = "flex";
     row.style.justifyContent = "center";
 
-    for(i=0; i < 16; i++){
+    for(i=0; i < num; i++){
         //Create Grid Boxes for Row
         const box = document.createElement('div');
         box.style.border = "1px black solid";
@@ -32,15 +32,44 @@ function createRow() {
 }
 
 
-function createGrid (){
+function createGrid (num){
 
     count = 0;
 
     //Creates 16 rows
-    while (count != 16){
-        createRow();
+    while (count != num){
+        createRow(num);
         count++;
     }
 };
 
-createGrid();
+
+function getNum () {
+
+    //Variable for boxes per row
+    let boxes = 0;
+
+    let num = prompt("Please enter a number from 1 to 100: ");
+    if (num < 1 && num > 100){
+        getNum();
+    } else {
+        boxes = num;
+    }
+
+    return boxes;
+};
+
+function playGame () {
+
+    let boxes = 0;
+
+    const newGame = document.getElementById('newgame');
+    newGame.addEventListener('click', () => {
+        let num = getNum();
+        createGrid(num);
+        }
+    );
+    
+};
+
+playGame();
