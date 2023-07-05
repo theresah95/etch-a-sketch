@@ -10,8 +10,8 @@ function createRow() {
         const box = document.createElement('div');
         box.style.border = "1px black solid";
         box.style.backgroundColor = "white";
-        box.style.height = "30px";
-        box.style.width = "30px";
+        box.style.height = "25px";
+        box.style.width = "25px";
         
         //Change Color of Box
         box.addEventListener(
