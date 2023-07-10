@@ -1,4 +1,8 @@
+
 function createRow(num) {
+
+    //Get container
+    const container = document.getElementById('container');
 
     //Create Row Container
     const row = document.createElement('div');
@@ -6,19 +10,19 @@ function createRow(num) {
     row.style.justifyContent = "center";
 
     for(i=0; i < num; i++){
-        //Create Grid Boxes for Row
+        //Create Grid Boxes for Row of num length
         const box = document.createElement('div');
         box.style.border = "1px black solid";
         box.style.backgroundColor = "white";
-        box.style.height = "30px";
-        box.style.width = "30px";
+        box.style.height = "10px";
+        box.style.width = "10px";
         
         //Change Color of Box
         box.addEventListener(
             "mouseenter",
             (event) => {
-              // highlight the mouseenter target
-              event.target.style.backgroundColor = "black";
+                // highlight the mouseenter target aka turn boxes black when mouse enters
+                event.target.style.backgroundColor = "black";
             }
           );
 
@@ -27,16 +31,14 @@ function createRow(num) {
     }
 
     //Append Row to Container
-    const container = document.getElementById('container');
     container.appendChild(row);
-}
-
+};
 
 function createGrid (num){
 
     count = 0;
 
-    //Creates 16 rows
+    //Creates num rows
     while (count != num){
         createRow(num);
         count++;
@@ -59,14 +61,24 @@ function getNum () {
     return boxes;
 };
 
+
 function playGame () {
 
     let boxes = 0;
 
     const newGame = document.getElementById('newgame');
     newGame.addEventListener('click', () => {
+        //Fetch container
+        const container = document.getElementById('container');
+        //Check if there are any children (previous grids) if so delete all children
+        while (container.firstChild){
+            container.removeChild(container.firstChild);
+        }
+        //Prompt for number of rows
         let num = getNum();
+        //Creates grid using inputted number
         createGrid(num);
+
         }
     );
     
