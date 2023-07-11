@@ -53,8 +53,8 @@ function getNum () {
     let boxes = 0;
 
     let num = prompt("Please enter a number from 1 to 100: ");
-    if (num < 1 && num > 100){
-        getNum();
+    if (num < 1 || num > 100){
+        alert("Invalid Entry. Values between 1 and 100 only. Try again.");
     } else {
         boxes = num;
     }
