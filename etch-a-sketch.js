@@ -7,15 +7,16 @@ function createRow(num) {
     //Create Row Container
     const row = document.createElement('div');
     row.style.display = "flex";
-    row.style.justifyContent = "center";
+    row.style.flex = "row";
+    row.style.position = "relative";
 
     for(i=0; i < num; i++){
         //Create Grid Boxes for Row of num length
         const box = document.createElement('div');
         box.style.border = "1px black solid";
         box.style.backgroundColor = "white";
-        box.style.height = "10px";
-        box.style.width = "10px";
+        box.style.height = "1vh";
+        box.style.width = "0.5vw";
         
         //Change Color of Box
         box.addEventListener(
@@ -38,7 +39,7 @@ function createGrid (num){
 
     count = 0;
 
-    //Creates num rows
+    //Creates num # of rows
     while (count != num){
         createRow(num);
         count++;
