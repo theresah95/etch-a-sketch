@@ -1,7 +1,15 @@
+* {
+    background-color: #D80404;
+}
+
+button {
+    background-color: white;
+}
 #title_section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 5px;
     
 }
 #container {
