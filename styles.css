@@ -16,5 +16,7 @@ button {
     display: flex;
     height: 960px;
     width: 960px;
+    justify-content: center;
+    align-items: flex-start;
 }
 

@@ -7,14 +7,17 @@ function createRow(num) {
     //Create Row Container
     const row = document.createElement('div');
     row.style.display = "flex";
+    row.style.flexDirection = "column";
+    row.style.height = "100%";
+    row.style.width = "100%";
 
     for(i=0; i < num; i++){
         //Create Grid Boxes for Row of num length
         const box = document.createElement('div');
         box.style.border = "0.25px grey solid";
         box.style.backgroundColor = "white";
-        box.style.height = "30px";
-        box.style.width = "30px";
+        box.style.height = "100%";
+        box.style.width = "100%";
         
         //Change Color of Box
         box.addEventListener(
@@ -29,8 +32,6 @@ function createRow(num) {
         row.appendChild(box);
     }
 
-    row.style.justifyContent = "center";
-    row.style.alignItems = "center";
     //Append Rows to Container
     container.appendChild(row);
 };
