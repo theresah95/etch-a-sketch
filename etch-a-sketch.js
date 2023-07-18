@@ -6,6 +6,7 @@ function createRow(num) {
 
     //Create Row Container
     const row = document.createElement('div');
+    //Add Row Styles
     row.style.display = "flex";
     row.style.flexDirection = "column";
     row.style.height = "100%";
