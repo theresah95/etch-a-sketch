@@ -15,7 +15,7 @@ function createRow(num) {
     for(i=0; i < num; i++){
         //Create Grid Boxes for Row of num length
         const box = document.createElement('div');
-        box.style.border = "0.25px grey solid";
+        //box.style.border = "0.25px grey solid";
         box.style.backgroundColor = "white";
         box.style.height = "100%";
         box.style.width = "100%";
